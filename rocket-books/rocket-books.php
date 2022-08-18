@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Rocket Books
  * Plugin URI:        https://mustcode.xyz/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Rocket Books Udm plugin made with wppb.me's generator.
  * Version:           1.0.0
  * Author:            Ion Tulbure
  * Author URI:        https://mustcode.xyz/
