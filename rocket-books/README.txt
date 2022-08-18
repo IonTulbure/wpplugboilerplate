@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Rocket Books ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://mustcode.xyz/
 Tags: comments, spam
