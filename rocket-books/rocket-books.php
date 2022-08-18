@@ -42,6 +42,18 @@ define( 'ROCKET_BOOKS_VERSION', '1.0.0' );
  */
 define( 'ROCKET_BOOKS_NAME', 'rocket-books' );
 
+// Plugin Diretly Path
+/**
+ * 
+ */
+define ('ROCKET_BOOKS_BASE_DIR', plugin_dir_path(  __FILE__  ));
+
+// Plugin Directly URL
+/**
+ * 
+ */
+define ('ROCKET_BOOKS_DIR_URL', plugin_dir_url( __FILE__ ));
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-rocket-books-activator.php
