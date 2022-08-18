@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://mustcode.xyz/
  * @since      1.0.0
  *
  * @package    Rocket_Books
@@ -18,7 +18,7 @@
  *
  * @package    Rocket_Books
  * @subpackage Rocket_Books/admin
- * @author     Your Name <email@example.com>
+ * @author     Ion Tulbure <admin@mustcode.xyz>
  */
 class Rocket_Books_Admin {
 
@@ -27,9 +27,9 @@ class Rocket_Books_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $rocket_books    The ID of this plugin.
+	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
-	private $rocket_books;
+	private $plugin_name;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Rocket_Books_Admin {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $rocket_books       The name of this plugin.
+	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $rocket_books, $version ) {
+	public function __construct( $plugin_name, $version ) {
 
-		$this->rocket_books = $rocket_books;
+		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
 	}
@@ -73,7 +73,7 @@ class Rocket_Books_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->rocket_books, plugin_dir_url( __FILE__ ) . 'css/rocket-books-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rocket-books-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Rocket_Books_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->rocket_books, plugin_dir_url( __FILE__ ) . 'js/rocket-books-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rocket-books-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 

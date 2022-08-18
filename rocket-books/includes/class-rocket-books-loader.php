@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       https://mustcode.xyz/
  * @since      1.0.0
  *
  * @package    Rocket_Books
@@ -19,7 +19,7 @@
  *
  * @package    Rocket_Books
  * @subpackage Rocket_Books/includes
- * @author     Your Name <email@example.com>
+ * @author     Ion Tulbure <admin@mustcode.xyz>
  */
 class Rocket_Books_Loader {
 

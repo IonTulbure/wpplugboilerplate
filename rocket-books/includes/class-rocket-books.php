@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       https://mustcode.xyz/
  * @since      1.0.0
  *
  * @package    Rocket_Books
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Rocket_Books
  * @subpackage Rocket_Books/includes
- * @author     Your Name <email@example.com>
+ * @author     Ion Tulbure <admin@mustcode.xyz>
  */
 class Rocket_Books {
 
@@ -44,9 +44,9 @@ class Rocket_Books {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $rocket_books    The string used to uniquely identify this plugin.
+	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
-	protected $rocket_books;
+	protected $plugin_name;
 
 	/**
 	 * The current version of the plugin.
@@ -72,7 +72,14 @@ class Rocket_Books {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->rocket_books = 'rocket-books';
+
+		if ( defined( 'ROCKET_BOOKS_NAME' ) ) {
+			$this->plugin_name = ROCKET_BOOKS_NAME;
+		} else {
+			$this->plugin_name = 'rocket-books';
+		}
+
+		// $this->plugin_name = 'rocket-books';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -152,7 +159,7 @@ class Rocket_Books {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Rocket_Books_Admin( $this->get_rocket_books(), $this->get_version() );
+		$plugin_admin = new Rocket_Books_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,12 +175,10 @@ class Rocket_Books {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Rocket_Books_Public( $this->get_rocket_books(), $this->get_version() );
+		$plugin_public = new Rocket_Books_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-
-		$this->loader->add_action( 'init', $plugin_public , 'register_book_post_type');
 
 	}
 
@@ -193,8 +198,8 @@ class Rocket_Books {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_rocket_books() {
-		return $this->rocket_books;
+	public function get_plugin_name() {
+		return $this->plugin_name;
 	}
 
 	/**

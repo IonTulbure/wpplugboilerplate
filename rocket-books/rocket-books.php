@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://example.com
+ * @link              https://mustcode.xyz/
  * @since             1.0.0
  * @package           Rocket_Books
  *
  * @wordpress-plugin
  * Plugin Name:       Rocket Books
- * Plugin URI:        https://mustcode.xyz
+ * Plugin URI:        https://mustcode.xyz/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            Ion Tulbure
- * Author URI:        https://mustcode.xyz
+ * Author URI:        https://mustcode.xyz/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       rocket-books
@@ -36,6 +36,11 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'ROCKET_BOOKS_VERSION', '1.0.0' );
+
+/**
+ * Currently plugin name.
+ */
+define( 'ROCKET_BOOKS_NAME', 'rocket-books' );
 
 /**
  * The code that runs during plugin activation.
@@ -71,7 +76,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-rocket-books.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since 1.0.0
+ * @since    1.0.0
  */
 function run_rocket_books() {
 
@@ -79,5 +84,4 @@ function run_rocket_books() {
 	$plugin->run();
 
 }
-
 run_rocket_books();
