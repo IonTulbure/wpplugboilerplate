@@ -44,15 +44,19 @@ define( 'ROCKET_BOOKS_NAME', 'rocket-books' );
 
 // Plugin Diretly Path
 /**
- * 
+ * Plugin base dir path.
+ * used to locate plugin resources primarily code files
+ * Start at version 1.0.0
  */
 define ('ROCKET_BOOKS_BASE_DIR', plugin_dir_path(  __FILE__  ));
 
 // Plugin Directly URL
 /**
- * 
+ * Plugin url to access its resources through browser
+ * used to access assets images/css/js files
+ * Start at version 1.0.0
  */
-define ('ROCKET_BOOKS_DIR_URL', plugin_dir_url( __FILE__ ));
+define ('ROCKET_BOOKS_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 /**
  * The code that runs during plugin activation.
