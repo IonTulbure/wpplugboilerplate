@@ -86,6 +86,8 @@ class Rocket_Books {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
+		$this->define_post_type_hooks();
+
 	}
 
 	/**
@@ -128,6 +130,11 @@ class Rocket_Books {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rocket-books-public.php';
+
+		/**
+		 * The class responsible for registering custom post types
+		 */
+		//require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rocket-books-post-types.php';
 
 		$this->loader = new Rocket_Books_Loader();
 
@@ -222,6 +229,15 @@ class Rocket_Books {
 	 */
 	public function get_version() {
 		return $this->version;
+	}
+
+	/**
+	 * Define all actions and filter hooks for registering custom post types
+	 */
+
+	public function define_post_type_hooks() {
+
+		// $this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}
 
 }
