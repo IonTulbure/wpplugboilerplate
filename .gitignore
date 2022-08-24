@@ -9,6 +9,8 @@ wp-content/*
 !wp-content/themes/
 
 # ignore these plugins
+wp-content/plugins/query-monitor/
+wp-content/plugins/show-current-template/
 wp-content/plugins/hello.php
 
 # ignore specific themes
