@@ -141,16 +141,16 @@ class Rocket_Books_Public
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array('slug' => 'book'),
+			'rewrite'            => array('slug' => 'rocket-books'),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => null,
-			'menu-icon'			 => 'dashicons-book',
+			'menu_icon'			 => 'dashicons-book',
 			'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
 		);
 
-		register_post_type('book', $args);
+		register_post_type('rocket-books', $args);
 	}
 
 	/**

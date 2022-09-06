@@ -9,7 +9,12 @@ wp-content/*
 !wp-content/themes/
 
 # ignore these plugins
+wp-content/plugins/query-monitor/
+wp-content/plugins/show-current-template/
 wp-content/plugins/hello.php
+
+/query-monitor/
+/show-current-template/
 
 # ignore specific themes
 wp-content/themes/twenty*/
