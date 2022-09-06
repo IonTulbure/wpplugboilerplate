@@ -160,7 +160,7 @@ class Rocket_Books_Public
 	public function register_taxonomy_genre()
 	{
 
-		register_taxonomy('genre', array('book'), array(
+		register_taxonomy('genre', array('rocket-books'), array(
 			'description'  => 'Genre',
 			'labels' => array(
 				'name'                       => _x('Genre', 'taxonomy general name', 'rocket-books'),
